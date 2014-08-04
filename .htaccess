@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^yhb360.com [NC]
+RewriteRule ^(.*)$ http://www.yhb360.com/$1 [L,R=301]
+RewriteRule ^prd/(.*)$ index.php?m=product&a=mobileview&product_id=$1
+RewriteRule ^recall/(.*?)/(.*?)$ index.php?m=product&a=view&product_id=$1&verify=$2&type=rewrite
